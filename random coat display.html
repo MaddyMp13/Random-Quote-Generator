@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>random coat display</title>
+    <style>
+        .container {
+            margin: 30px auto;
+            width: 50%;
+            background-color: #DEECF7;
+            color: #3D6EF4;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        #showQuote {
+            color: #000;
+            font-size: 20px;
+            margin-left: 15px;
+        }
+
+        #changeQuoteBtn {
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: none;
+            color: #fff;
+            background-color: rgb(236, 90, 64);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            Today's quote is here
+        </h1>
+        <p id="showQuote"></p>
+        <button id="changeQuoteBtn">Try New Quote</button>
+
+    </div>
+
+    <script>
+        const quotes = [
+            "The best way to get started is to quit talking and begin doing. – Walt Disney",
+            "Success is not final, failure is not fatal: It is the courage to continue that counts. – Winston Churchill",
+            "Don’t watch the clock; do what it does. Keep going. – Sam Levenson",
+            "Believe you can and you're halfway there. – Theodore Roosevelt",
+            "I never dream of success. I work for it. – Estée Lauder",
+            "Do something today that your future self will thank you for.",
+            "It always seems impossible until it's done. – Nelson Mandela",
+            "Hardships often prepare ordinary people for an extraordinary destiny. – C.S. Lewis",
+            "Great things are done by a series of small things brought together. – Vincent Van Gogh",
+            "Your limitation—it’s only your imagination."
+        ];
+
+        let btn = document.getElementById("changeQuoteBtn")
+        let showQuote = document.getElementById("showQuote")
+
+        btn.addEventListener("click", () => {
+            showQuote.innerText = quotes[Math.floor(Math.random() * quotes.length)]
+        })
+
+        window.onload = () => {
+            showQuote.innerText = quotes[0]
+        }
+
+    </script>
+</body>
+
+</html>
