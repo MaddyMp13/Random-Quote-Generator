@@ -59,11 +59,11 @@
         let showQuote = document.getElementById("showQuote")
 
         btn.addEventListener("click", () => {
-            showQuote.innerText = quotes[Math.floor(Math.random() * quotes.length)]
+            showQuote.innerText = `" ` + quotes[Math.floor(Math.random() * quotes.length)] + ` "`
         })
 
         window.onload = () => {
-            showQuote.innerText = quotes[0]
+            showQuote.innerText = `" ` + quotes[0] + ` "`
         }
 
     </script>
